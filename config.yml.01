@@ -1,0 +1,33 @@
+port: 3000
+db:
+  type: $(DB_TYPE)
+  host: ${DB_HOST}
+  port: ${DB_PORT}
+  user: ${DB_USER}
+  pass: ${DB_PASS}
+  db: ${DB_NAME}
+  ssl: true
+  sslOptions:
+    auto: true
+  schema: public
+  storage: path/to/database.sqlite
+ssl:
+  enabled: false
+  port: 3443
+  provider: custom
+  format: pem
+  key: path/to/key.pem
+  cert: path/to/cert.pem
+  pfx: path/to/cert.pfx
+  passphrase: null
+  dhparam: null
+  domain: wiki.yourdomain.com
+  subscriberEmail: admin@example.com
+pool:
+bindIP: 0.0.0.0
+logLevel: info
+logFormat: default
+offline: false
+ha: false
+dataPath: ./data
+bodyParserLimit: 5mb
